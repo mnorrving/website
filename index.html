@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mackan Monitor</title>
+    <style>
+      /* CSS to center the logo image and set the background color */
+      body {
+        background-color: #f2f2f2;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+      .logo {
+        margin-bottom: 40px;
+        animation: pulsate 2s ease-in-out infinite;
+      }
+      .buttons {
+        display: flex;
+      }
+      .buttons button {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        border-radius: 20px;
+      }
+      .buttons button.login {
+        border: 2px solid #04b0ba;
+        color: #04b0ba;
+        font-weight: 600;
+      }
+      .buttons button.signup {
+        border: 2px solid #f05c3e;
+        color: #f05c3e;
+        font-weight: 600;
+      }
+      .buttons button:hover {
+        background-color: #ddd;
+        cursor: pointer;
+      }
+
+      @keyframes pulsate {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.02);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="logo">
+        <img src="logo-web.png" alt="Logo" />
+      </div>
+      <div class="buttons">
+        <button class="login">Login</button>
+        <button class="signup">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>
