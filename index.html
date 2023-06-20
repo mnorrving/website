@@ -2,12 +2,15 @@
 <html>
   <head>
     <title>Mackan Monitor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link rel="icon" type="image/x-icon" href="favicon.png" />
 
     <style>
       /* CSS to center the logo image and set the background color */
       body {
         background-color: #f2f2f2;
+        font-family: Poppins, sans-serif;
       }
       .center {
         display: flex;
@@ -19,27 +22,37 @@
       .logo {
         margin-bottom: 40px;
         animation: pulsate 2s ease-in-out infinite;
+        width: 80%; /* add a relative width */
+        max-width: 600px; /* limit the maximum width if necessary */
+        overflow: hidden; /* ensure that nothing spills over the logo container */
       }
+      .logo img {
+        width: 100%;
+        height: auto;
+      }
+
       .buttons {
         display: flex;
       }
-      .buttons button {
+      .buttons a {
+        display: inline-block;
         padding: 10px 20px;
         margin: 10px;
         font-size: 16px;
         border-radius: 20px;
+        text-decoration: none;
       }
-      .buttons button.login {
+      .buttons a.login {
         border: 2px solid #04b0ba;
         color: #04b0ba;
         font-weight: 600;
       }
-      .buttons button.signup {
+      .buttons a.signup {
         border: 2px solid #f05c3e;
         color: #f05c3e;
         font-weight: 600;
       }
-      .buttons button:hover {
+      .buttons a:hover {
         background-color: #ddd;
         cursor: pointer;
       }
@@ -66,6 +79,9 @@
           font-size: 20px !important;
           width: 200px !important;
         }
+        .logo {
+          max-width: 80%;
+        }
       }
     </style>
   </head>
@@ -75,8 +91,8 @@
         <img src="logo-web.png" alt="Logo" />
       </div>
       <div class="buttons">
-        <button class="login">Login</button>
-        <button class="signup">Sign Up</button>
+        <a class="login" href="http://app.norrving.com/login">Login</a>
+        <a class="signup" href="http://app.norrving.com/signup">Sign Up</a>
       </div>
     </div>
   </body>
