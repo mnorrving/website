@@ -9,9 +9,21 @@
     <style>
       /* CSS to center the logo image and set the background color */
       body {
-        background-color: #f2f2f2;
+        background: #005aa7; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #fffde4,
+          #005aa7
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #fffde4,
+          #005aa7
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         font-family: Poppins, sans-serif;
       }
+
       .center {
         display: flex;
         justify-content: center;
@@ -43,13 +55,16 @@
         text-decoration: none;
       }
       .buttons a.login {
-        border: 2px solid #04b0ba;
-        color: #04b0ba;
+        border: 2px solid #016469;
+        background-color: #04b0ba;
+        color: #fff;
+        padding: 10px 20px;
         font-weight: 600;
       }
       .buttons a.signup {
-        border: 2px solid #f05c3e;
-        color: #f05c3e;
+        border: 2px solid #a41f05;
+        background-color: #f05c3e;
+        color: #fff;
         font-weight: 600;
       }
       .buttons a:hover {
